@@ -5,6 +5,10 @@
     var rooms = $firebaseArray(ref);
 
     Room.all = rooms;
+      
+    Room.create = function(newChatRoom) {
+        rooms.$add(newChatRoom);    
+    };
 
     return Room;
   }
